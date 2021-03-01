@@ -46,10 +46,10 @@ print("Sidelengths of solvant box: ", om_solv.boxLengths)
 
 # Simulation parameters
 step_size = 2.0* su.femtosecond
-sim_len = 1.0 * su.nanosecond
+sim_len = 100.0 * su.nanosecond
 steps = round(sim_len / step_size)
 
-report_time = 10.0*su.picosecond
+report_time = 50.0*su.picosecond
 report_steps = round(report_time / step_size)
 print(f"Initialized| step_size = {step_size}, sim_len = {sim_len}, Num steps = {steps}, retport_time = {report_time}")
 
@@ -86,7 +86,7 @@ sim.minimizeEnergy()
 
 # Reporters
 print("Appending Reporters")
-sim.reporters.append(StateDataReporter(sys.stdout, round(steps/100), step=True,
+sim.reporters.append(StateDataReporter(sys.stdout, round(steps/10), step=True,
                                        potentialEnergy=False, kineticEnergy=False,
                                        temperature=True, volume=True, density=False))
 
