@@ -68,7 +68,7 @@ integrator = mm.LangevinIntegrator(heat_bath,              # Temperature of heat
 
 
 # Change to CUDA platform
-platform = Platform.getPlatformByName('CUDA')
+platform = mm.openmm.Platform.getPlatformByName('CUDA')
 properties = {'CudaDeviceIndex':1} # you can add other things like the precision here
 
 
