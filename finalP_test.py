@@ -62,9 +62,9 @@ system = om_solv.createSystem(om_params, nonbondedMethod=app.PME,
 
 # Create the integrator for the NVT ensemble
 heat_bath = 303.15*su.kelvin
-integrator = mm.LangevinMiddleIntegrator(heat_bath,              # Temperature of heat bath
-                                         1.0/su.picosecond,      # Friction coefficient
-                                         step_size)              # Time step
+integrator = mm.LangevinIntegrator(heat_bath,              # Temperature of heat bath
+                                   1.0/su.picosecond,      # Friction coefficient
+                                   step_size)              # Time step
 
 
 # Change to CUDA platform
