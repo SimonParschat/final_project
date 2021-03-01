@@ -68,12 +68,12 @@ integrator = mm.LangevinIntegrator(heat_bath,              # Temperature of heat
 
 
 # Change to CUDA platform
-platform = mm.openmm.Platform.getPlatformByName('CUDA')
+# platform = mm.openmm.Platform.getPlatformByName('CUDA')
 properties = {'CudaDeviceIndex':1} # you can add other things like the precision here
 
 
 # Create our Simulation object with our system and chosen integrator
-sim = app.Simulation(om_solv.topology, system, integrator, platform, properties)
+sim = app.Simulation(om_solv.topology, system, integrator, properties)
 
 
 # Set the positions from our PDB file
