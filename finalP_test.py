@@ -18,7 +18,7 @@ from parmed import unit as u
 
 
 # Load CHARMM parameter, psf and pdb files from the Solution Builder
-drive_path = 'run_files/'
+drive_path = ''
 om_params = om_paramset.CharmmParameterSet(drive_path + 'top_all36_prot.rtf', drive_path + 'par_all36m_prot.prm',
                                drive_path + 'top_all36_cgenff.rtf', drive_path + 'par_all36_cgenff.prm',
                                drive_path + 'ben.rtf', drive_path + 'ben.prm',
