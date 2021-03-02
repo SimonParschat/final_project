@@ -46,10 +46,10 @@ print("Sidelengths of solvant box: ", om_solv.boxLengths)
 
 # Simulation parameters
 step_size = 2.0* su.femtosecond
-sim_len = 100.0 * su.nanosecond
+sim_len = 50.0 * su.nanosecond
 steps = round(sim_len / step_size)
 
-report_time = 50.0*su.picosecond
+report_time = 25.0*su.picosecond
 report_steps = round(report_time / step_size)
 print(f"Initialized| step_size = {step_size}, sim_len = {sim_len}, Num steps = {steps}, retport_time = {report_time}")
 
